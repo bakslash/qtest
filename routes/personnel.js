@@ -5,7 +5,7 @@ const router=express.Router()
 
 
 
-
+router.get('/',loginController.getPersonnel)
 router.post('/login',loginController.login)
 
 

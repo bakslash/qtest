@@ -57,3 +57,14 @@ exports.login = async (req, res, next) => {
   
     } catch (err) { console.log(err); }
   };
+
+  exports.getPersonnel = async(req,res, next)=>{
+    try{
+        console.log('getting personel ');
+    const personnel = await models.personnel.findAll()
+    console.log(personnel);
+    await returns.successfullReturns(req,res,personnel)
+    }catch(err){
+        console.log(err);
+    }
+}
